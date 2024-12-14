@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>HOME</title>
+    
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    
+    <body>
+
+        <div class = 'top-container'>
+            <h1>welcome!</h1>
+            <a href="/"><img src="JPJC_CandyLab_Logo.jpg" alt="logo" class = "logo"></a>
+            <a href="/signup"><h1 style="text-decoration: none;">Sign Up</h1></a>
+        </div>
+
+        <div class="cart-container">
+
+            <form action="/orderdetails", method="post", class = "formthing">
+                <table class = 'cart-table'>
+                    <tbody class = "itembody">
+                    <% inv.forEach(element => {%>
+                        <tr class = 'itemrow'>
+                            <th><img src="<%= element.imgURL %>" class = "prodimg"></th>
+                            <td><b><%= element.Name %><b></td>
+                            <td><%= element.Type %></td>
+                            <td>$<%= element.Price %></td>
+                            <td><%= element.Avail %> avail</td>
+                            <td>
+                                <input type="text" name = "<%= element.Name %>" id = 'order' value = 0>
+                                <label for="order">Order</label>
+                            </td>
+                        </tr>
+                    <%}) %>
+                    </tbody>
+                </table>
+                <br>
+                <table class = 'details-table'>
+                    <tr>
+                        <td>
+                            <label for="custname"> Customer Name</label>
+                            <input type="text" name = "custname" id = "custname">
+                            <input type="submit" name = "submitguest" value="Order as guest">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mememail"> Member Email</label>
+                            <input type="text" name = "mememail" id = "mememail">
+                            <label for="passwd"> Password</label>
+                            <input type="text" name = "passwd" id = "passwd">
+                            <input type="submit" name = "submitmember" >
+                        </td>
+                    </tr>
+                    <% if (locals.error) { %>
+                        <tr>
+                            <td><p style= "color: red;">><%= error %></p</td>
+                        </tr>
+                    <%} %>
+                </table>
+            </form>
+
+        </div>
+    
+    </body>
+    <script src="script.js" type="module"></script>
+</html>

@@ -1,0 +1,25 @@
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5em;
+}
+
+.imagelogo {
+    width: 45%;
+}
+
+tr {
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    padding-bottom: 1em;
+}
+
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

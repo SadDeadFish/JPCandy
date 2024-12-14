@@ -1,0 +1,6 @@
+mem_name,mem_email,password
+Mary,mary12@gmail.com,Japan2023!
+Juliet,juliet@gmail.com,Happy16*
+William,william@gmail.com,Sql1234
+Kaili,kaili@gmail.com,Meow88#
+Yusof,yusof@gmail.com,JPjc#2022

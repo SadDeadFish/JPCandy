@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>HOME</title>
+        <link rel="stylesheet" type="text/css" href="orderstyle.css" />
+    </head>
+    <body>
+        <div class="welcome">
+            <h1>Order Details</h1>
+            <a href="/"><img src="JPJC_CandyLab_Logo.jpg" alt="" class = "imagelogo"></a>
+        </div>
+
+        <div class="orderdets">
+            <% if (locals.guestname) { %>
+                <h1>Order For: <%= locals.guestname %></h1>
+            <% } %>
+            <% if (locals.memname) { %>
+                <h1>Order For: <%= locals.memname %></h1>
+            <% } %>
+            <table border="1" style = "border-collapse: collapse;">
+                <tr>
+                    <td>Name</td>
+                    <td>Unit Price ($)</td>
+                    <td>Qty</td>
+                </tr>
+                <% orderitems.forEach(element => {%>
+                    <tr>
+                        <td><%= element[0] %></td>
+                        <td><%= element[1] %></td>
+                        <td><%= element[2] %></td>
+                    </tr>
+                <%}) %>
+            </table>
+
+            <% if (locals.memname) { %>
+                <p>Total Cost: $<%= totalcost %></p>
+                <p>Member Discount: 10%</p>
+                <h3>Amount Payable: $<%= totalcost * 0.9 %></h3>
+            <% } %>
+
+            <% if (locals.guestname) { %>
+                <h3>Total Cost: $<%= totalcost %></h3>
+            <% } %>
+        </div>
+        
+        
+    </body>
+</html>

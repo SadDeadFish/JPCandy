@@ -1,0 +1,16 @@
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5em;
+}
+
+.imagelogo {
+    width: 45%;
+}
+
+.orderdets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

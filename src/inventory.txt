@@ -1,0 +1,5 @@
+1,Hershey Dipped Pretzels,Pretzel,8,10,HersheyDippedPretzels.jpg
+2,Hershey Kisses Chocolate,Chocolate,7,10,HersheyKissesChocolate.jpg
+3,Hershey Milk Chocolate,Chocolate Bar,2,10,HersheyMilkChocolate.jpg
+4,Kit Kat Donut,Wafer Chocolate,2.5,10,KitKatDonut.jpg
+5,Reese Caramel,Peanut Butter with Caramel,5,10,ReeseCaramel.jpg
