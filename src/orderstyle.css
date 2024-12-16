@@ -1,11 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5c1d7;
+    color: #4a4a4a;
+}
+
 .welcome {
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 5em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .imagelogo {
-    width: 45%;
+    width: auto;
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.imagelogo:hover {
+    transform: scale(1.05);
 }
 
 .orderdets {
@@ -13,4 +30,58 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2em;
+}
+
+.orderdets h1 {
+    color: #ff69b4;
+    margin-bottom: 1.5em;
+}
+
+.orderdets table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(255, 182, 193, 0.2);
+}
+
+.orderdets tr {
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 1px solid #ffc0cb;
+    transition: background-color 0.2s;
+}
+
+.orderdets td {
+    flex: 1;
+    text-align: center;
+    
+    font-size: 15px;
+}
+
+.orderdets tr:first-child {
+    background-color: #ffb6c1;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.orderdets tr:first-child td {
+    font-size: 14px;
+}
+
+.orderdets p, .orderdets h3 {
+    color: #ff69b4;
+    margin: 0.5em 0;
+}
+
+.orderdets h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
 }
